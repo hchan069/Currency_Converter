@@ -11,8 +11,8 @@ public class MainActivity extends AppCompatActivity {
     public void convertToDollars(View view) {
         double rate = 7.8;
         EditText myDollars = findViewById(R.id.myDollars);
-        double convertedDollars = Double.parseDouble(myDollars.getText().toString()) * rate;
-        Toast.makeText(this, "$" + convertedDollars, Toast.LENGTH_SHORT).show();
+        Double convertedDollars = Double.parseDouble(myDollars.getText().toString()) * rate;
+        Toast.makeText(this, "$" + String.format("%.2f", convertedDollars.toString()), Toast.LENGTH_SHORT).show();
     }
 
     @Override
